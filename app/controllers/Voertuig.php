@@ -29,6 +29,8 @@ class Voertuig extends BaseController
             $result = $this->voertuigModel->getVehicles($id);
             $rows = "";
             foreach ($result as $voertuig) {
+                $voertuigen = $voertuig->VoertuigID;
+                $instructeurId = $voertuig->InstructeurId;
                 $rows .= "<tr>
                 <td>$voertuig->TypeVoertuig</td>
                 <td>$voertuig->Type</td>
@@ -39,6 +41,11 @@ class Voertuig extends BaseController
                 <td>
                     <a href='../../wijzigen/id/$voertuig->VoertuigID'>
                         <i class='bx bxs-edit' style='color:#2c2323'></i>
+                    </a>
+                </td>
+                <td>
+                    <a href='../../delete/id/$voertuigen?voertuig=$voertuigen&instructeur=$instructeurId&case=1'>
+                        <i class='bx bxs-trash' style='color:#ff0000'></i>
                     </a>
                 </td>
                 </tr>";

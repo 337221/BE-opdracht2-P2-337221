@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?= URLROOT; ?>/css/style.css">
-    <title>Create</title>
+    <title>Alle Voertuigen</title>
 </head>
 <body>
-    <nav class="navbar">
+<nav class="navbar">
         <div class="navbar-center">
             <ul class="navbar-list">
                 <li><a href="<?= URLROOT; ?>" class="navbar-item">Home</a></li>
@@ -20,12 +20,23 @@
     <div class="container">
         <div class="circle"></div>
         <div class="circle"></div>
-        <div class="card">
+        <h1>
+            <?= $data['title']; ?>
+        </h1>
+
+        <div class="card voertuig">
             <div class="ruimte">
-                <h2><?= $data['title']; ?></h2>
+                <table>
+                    <thead>
+                        <?= $data['th']; ?>
+                    </thead>
+                    <tbody>
+                        <?= $data['rows']; ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <script src="<?= URLROOT; ?>/js/script.js"></script>
+    <script src="<?= URLROOT; ?>/js/nav.js"></script>
 </body>
 </html>

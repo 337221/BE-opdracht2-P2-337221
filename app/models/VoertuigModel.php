@@ -13,6 +13,7 @@ class VoertuigModel
     {
         $query = "SELECT 
                     V.Id AS VoertuigID,
+                    I.Id AS InstructeurId,
                     TV.TypeVoertuig,
                     V.Type,
                     V.Kenteken,

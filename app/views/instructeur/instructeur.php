@@ -12,6 +12,7 @@
             <ul class="navbar-list">
                 <li><a href="<?= URLROOT; ?>" class="navbar-item">Home</a></li>
                 <li><a href="<?= URLROOT; ?>/instructeur" class="navbar-item-active">Instructeurs</a></li>
+                <li><a href="<?= URLROOT; ?>/allevoertuigen" class="navbar-item">Alle voertuigen</a></li>
             </ul>
         </div>
     </nav>
